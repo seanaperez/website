@@ -1,6 +1,6 @@
 {
   "name": "seanperez-net-qwik",
-  "description": "Demo App with Routing built-in (recommended)",
+  "description": "seanperez-net-qwik",
   "engines": {
     "node": ">=15.0.0"
   },
