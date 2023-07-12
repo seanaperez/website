@@ -10,7 +10,7 @@ export const GETTING_STARTED_STEPS = [
   {
     message:
       "<b>If</b> your looking around and wonder why not much is going on here...",
-    hint: 'Have a look at <a href="https://github.com/serbyxp/" target="_blank">this page</a> to see any public code that I may have availble...',
+    hint: 'Have a look at <a href="https://github.com/seanaperez/" target="_blank">this page</a> to see any public code that I may have availble...',
   },
   {
     message:
