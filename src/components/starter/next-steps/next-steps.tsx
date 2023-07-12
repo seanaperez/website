@@ -44,7 +44,7 @@ export default component$(() => {
   );
 
   return (
-    <div class="container container-purple container-center">
+    <div id="about" class="container container-purple container-center">
       <h2>
         what's this
         <br />
