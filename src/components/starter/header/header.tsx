@@ -1,5 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import styles from "./header.module.css";
+import { Link } from "@builder.io/qwik-city";
 
 export default component$(() => {
   return (
@@ -12,25 +13,25 @@ export default component$(() => {
         </div>
         <ul>
           <li>
-            <a
+            <Link
               href="/#about"
             >
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="/projects"
             >
               Projects
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="/#contact"
             >
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
