@@ -1,9 +1,10 @@
 import { component$ } from "@builder.io/qwik";
-import type { DocumentHead } from "@builder.io/qwik-city";
+import { Link, type DocumentHead } from "@builder.io/qwik-city";
 
 import Hero from "~/components/starter/hero/hero";
 import Infobox from "~/components/starter/infobox/infobox";
 import Starter from "~/components/starter/next-steps/next-steps";
+import { EMAIL, GITHUB_USER, THREADS, TWITTER } from "~/constants";
 
 export default component$(() => {
   return (
@@ -15,15 +16,15 @@ export default component$(() => {
       <div role="presentation" class="ellipsis ellipsis-purple"></div>
 
       <div class="container container-flex">
-          <Infobox>
-            <div q:slot="title" class="icon icon-apps">
-              Project Examples
-            </div>
-            <p>
-              Nothing here yet...
-              <a href="/projects"> Projects</a>.
-            </p>
-          </Infobox>
+        <Infobox>
+          <div q:slot="title" class=" icon-apps">
+            Project Examples
+          </div>
+          <p>
+            Nothing here yet...
+            <Link href="/projects"> Projects</Link>.
+          </p>
+        </Infobox>
 
         <div id="contact">
           <Infobox>
@@ -33,34 +34,34 @@ export default component$(() => {
             <ul>
               <li>
                 <span>Follow </span>
-                <a href="https://twitter.com/serbyxp" target="_blank">
+                <Link href={`https://twitter.com/${TWITTER}`} target="_blank">
                   @SerbyXP
-                </a>
+                </Link>
                 <span> on Twitter</span>
               </li>
               <li>
                 <span>Follow </span>
-                <a href="https://www.threads.net/@seanaperez" target="_blank">
+                <Link href={`https://www.threads.net/${THREADS ?? '@seanaperez'}`} target="_blank">
                   @SeanAPerez
-                </a>
+                </Link>
                 <span> on Threads</span>
               </li>
               <li>
                 <span>Open issues and contribute on </span>
-                <a href="https://github.com/seanaperez/" target="_blank">
+                <Link href={`https://github.com/${GITHUB_USER ?? 'seanaperez'}/`} target="_blank">
                   GitHub
-                </a>
+                </Link>
               </li>
               <li>
                 <span>Email </span>
-                <a href="mailto:contact@seanperez.net">
-                  contact@seanperez.net
-                </a>
+                <Link href={`mailto:${EMAIL ?? 'contact@seanperez.net'}`}>
+                  {EMAIL ?? 'contact@seanperez.net'}
+                </Link>
               </li>
             </ul>
           </Infobox>
         </div>
-      </div>
+      </div >
     </>
   );
 });

@@ -7,9 +7,9 @@ export default component$(() => {
     <header class={styles.header}>
       <div class={["container", styles.wrapper]}>
         <div class={styles.logo}>
-          <a href="/" title="home">
+          <Link href="/" title="home">
             <h2>Sean<b class={styles.highlight}> Perez</b></h2>
-          </a>
+          </Link>
         </div>
         <ul>
           <li>
